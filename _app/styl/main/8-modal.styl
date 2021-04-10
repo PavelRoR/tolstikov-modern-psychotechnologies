@@ -1,0 +1,61 @@
+.white-popup
+	position: relative;
+	background: #F0F3F5
+	padding: 50px 20px;
+	width: auto;
+	max-width: 650px;
+	margin: 20px auto;
+	@media screen and (max-width 560px)
+		padding 30px 20px 20px
+	@media screen and (max-width 385px)
+		padding 30px 15px 15px
+.form-modal
+	margin: 0 auto
+.modal-title
+	text-align center
+	font-family: GM
+	font-size: 30px
+	font-weight: bold
+	margin-bottom: 25px
+	text-transform uppercase
+	@media screen and (max-width 560px)
+		font-size: 24px
+		margin-bottom: 20px
+	@media screen and (max-width 385px)
+		font-size: 22px
+		margin-bottom: 10px
+.mfp-fade.mfp-bg
+	opacity: 0;
+	transition: all 0.5s ease-out;
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready
+	opacity: 0.8;
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing
+	opacity: 0;
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content
+	opacity: 0;
+	transition: all 0.5s ease-out;
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content
+	opacity: 1;
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content
+	opacity: 0;
+.input-mail-modal
+	display block
+	float: none
+	margin 0 auto 10px
+	width 100%
+	max-width 380px
+.button-form-modal
+	display block
+	float: none
+	margin 0 auto
+	width 100%
+	max-width 380px
+.checking-modal
+	max-width 440px
+	@media screen and (max-width 991px)
+		max-width 380px

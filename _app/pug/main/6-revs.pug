@@ -1,0 +1,13 @@
+section#revs
+	.container
+		+gt('.general-title-revs-1','Видео-отзывы:')
+		.video-revs-arrows-1
+	.revs-slider
+		each yt, n in {1:'AWpEmtLhoSs',2: 'Cl8G2M8h1G4',3: 'FCeeM4u5Cmc',4:'cygSlkrU_l4',5: 'GeCUbAS4G3Y'}
+			div: .video-wrapper-revs-back: .video-wrapper.video-wrapper-revs(data-youtube=yt data-img=path+"img/revs/video-"+n+".jpg"): img(src=path+"img/revs/video-"+n+".jpg", alt="Отзыв "+n)
+	.container
+		+gt('.general-title-revs-2','Отзывы:')
+		.video-revs-arrows-2
+	.revs-slider-text
+		each n in [1,2,3,4,5,6,7]
+			a.text-rev-link(href=path+"img/revs/text-"+n+".jpg"): img(src=path+"img/revs/text-"+n+".jpg", alt="Отзыв "+n).text-rev-img

@@ -1,0 +1,58 @@
+-var path = '../';
+-var head_url = 'https://tolstikov.mastervision.su/modern-psychotechnologies/confirm/';
+-var head_title = 'УПС! Я не могу отправить рассылку на мастер-класс, тебе нужно подтвердить свою почту';
+//-var head_description = '';
+//-var head_img = 'img/banner.jpg';
+-var styles = path+'css/confirm.min.css';
+-var fav_ap = path+'favicon.svg';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var hCl = 'header-promo';
+//-var scripts = path+'js/scripts.min.js';
+-var noref = true
+//- -var action = '';
+//- -var group = '';
+//- -var formId = '';
+//- -var formVc = '';
+//- -var footer_title = true
+//- -var oferta = 'https://mastervision.su/oferta.docx'
+//- -var ak = true
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		.wrapper
+			section#main
+				.container
+					include pug/base/1-header
+					.circle.circle-blue.circle-main-1
+					.circle.circle-bordered.circle-main-2
+					.content
+						h1.main-title
+							span УПС!
+							br
+							| Я НЕ МОГУ ОТПРАВИТЬ ССЫЛКУ НА 
+							span МАСТЕР-КЛАСС, 
+							br
+							| ТЕБЕ НУЖНО 
+							span ПОДТВЕРДИТЬ СВОЮ ПОЧТУ.
+						p.main-text Перейди в свою почту
+						.posts
+							a.post-link(href="https://mail.yandex.ru/" target="_blank")
+								img.post-icon(src=path+"img/icons/yandex.png" alt="Яндекс")
+							a.post-link(href="https://e.mail.ru/messages/inbox/" target="_blank")
+								img.post-icon(src=path+"img/icons/mailru.png" alt="Mailru")
+							a.post-link(href="https://mail.google.com/mail" target="_blank")
+								img.post-icon(src=path+"img/icons/gmail.png" alt="Gmail")
+							a.post-link(href="https://mail.yahoo.com/" target="_blank")
+								img.post-icon(src=path+"img/icons/yahoo.png" alt="Yahoo")
+						h2.main-subtitle Не нашли письмо? Проверьте папку 
+							span промоакции, оповещения или спам
+		include pug/base/2-footer
+		include pug/base/3-scripts
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts

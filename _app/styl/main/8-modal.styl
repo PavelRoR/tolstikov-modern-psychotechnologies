@@ -1,29 +1,38 @@
 .white-popup
 	position: relative;
-	background: #F0F3F5
+	background: #fff
 	padding: 50px 20px;
 	width: auto;
 	max-width: 650px;
 	margin: 20px auto;
+	overflow hidden
 	@media screen and (max-width 560px)
 		padding 30px 20px 20px
 	@media screen and (max-width 385px)
 		padding 30px 15px 15px
+.circle-modal-1
+	width 180px
+	height: 180px
+	top calc(50% - 90px)
+	right -90px
+.circle-modal-2
+	width 280px
+	height: 280px
+	top -140px
+	left -140px
 .form-modal
 	margin: 0 auto
 .modal-title
 	text-align center
-	font-family: GM
 	font-size: 30px
 	font-weight: bold
 	margin-bottom: 25px
-	text-transform uppercase
 	@media screen and (max-width 560px)
 		font-size: 24px
 		margin-bottom: 20px
 	@media screen and (max-width 385px)
 		font-size: 22px
-		margin-bottom: 10px
+		margin-bottom: 15px
 .mfp-fade.mfp-bg
 	opacity: 0;
 	transition: all 0.5s ease-out;
@@ -55,7 +64,7 @@
 	margin 0 auto
 	width 100%
 	max-width 380px
+	padding 15px 20px
 .checking-modal
-	max-width 440px
-	@media screen and (max-width 991px)
+	@media screen and (max-width 560px)
 		max-width 380px

@@ -2,7 +2,10 @@ section#author
 	.container
 		.row
 			.col-md-6
-				+imgs('auhtor-img','img/images/victor.png','Виктор Толстиков')
+				if autCourse
+					+imgs('auhtor-img','img/images/victor-course.png','Виктор Толстиков')
+				else
+					+imgs('auhtor-img','img/images/victor.png','Виктор Толстиков')
 			.col-md-6
 				+gt('','Виктор Толстиков')
 				p.general-text.general-text-author НЛП тренер международного уровня, автор и ведущий уникальных курсов и тренингов

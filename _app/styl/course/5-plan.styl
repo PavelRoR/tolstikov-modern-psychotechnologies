@@ -1,0 +1,46 @@
+#plan
+	padding 100px 0 50px
+.module
+	padding 0 0 60px
+	margin 0 0 60px
+	border-bottom: 1px solid #7A7A7A;
+	&&-6
+		border-bottom: 0
+		// margin-bottom: 100px
+	&-title
+		font-size: 48px
+		font-weight: 300
+		position relative
+		width 90%
+		cursor pointer
+		&:before
+			content: ''
+			display block
+			position absolute
+			width 72px
+			height 72px
+			top 35px
+			right -10%
+			cursor pointer
+			border-top: 3px solid #000000;
+			border-right: 3px solid #000000;
+			transform: rotate(-45deg)
+			transition: all .3s ease
+		&:hover
+			&:before
+				border-top: 3px solid #3A38DC
+				border-right: 3px solid #3A38DC
+		&.active
+			&:before
+				transform: rotate(-225deg)
+		span
+			font-weight: bold
+			color: #3A38DC
+		small
+			display block
+			font-size: 24px
+			font-weight: 300
+			color: #6C6C6C;
+.general-list-module
+	display none
+	margin-top: 60px

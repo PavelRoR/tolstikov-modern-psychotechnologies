@@ -1,0 +1,48 @@
+.circle-wants-1
+	width 162px
+	height 162px
+	top -10px
+	right -150px
+.circle-wants-2
+	width 490px
+	height 490px
+	top -90px
+	left -300px
+.wants-list
+	counter-reset: my-counter;
+	&-2
+		counter-reset: my-counter 4;
+	li
+		list-style: none;
+		font-size: 24px;
+		margin-bottom: 25px;
+		counter-increment: my-counter;
+		position: relative;
+		padding-left: 30px;
+		transition: all 0.3s ease;
+		&:hover
+			color: #3A38DC
+		&:before
+			content: counter(my-counter) '.';
+			font-size: 24px;
+			font-weight: bold;
+			position: absolute;
+			top: 0;
+			left: 0;
+		@media screen and (max-width 767px)
+			font-size: 20px
+			margin-bottom: 20px
+			&:before
+				top -3px
+		@media screen and (max-width 560px)
+			font-size: 18px
+			margin-bottom: 15px
+			padding-left: 25px
+			&:before
+				font-size: 20px
+.general-text-wants
+	margin 40px 0 30px
+	@media screen and (max-width 991px)
+		margin 30px 0
+	@media screen and (max-width 560px)
+		margin 20px 0 30px

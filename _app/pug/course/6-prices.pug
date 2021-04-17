@@ -1,0 +1,54 @@
+-var vnt = 'variant';
+// -var link_1 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5656&clean=true&lg=ru';
+// -var link_2 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5660&clean=true&lg=ru';
+// -var prepLink = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5664&clean=true&lg=ru';
+
+section#prices
+	.container
+		.circle.circle-blue.circle-prices-1
+		.circle.circle-bordered.circle-prices-2
+		.content
+			+gt('general-title-center','Выберите свой вариант:')
+			.variants
+				.row
+					.col-md-6
+						div(class=`${vnt}`)
+							div(class=`${vnt}-head`)
+								h4(class=`${vnt}-head-title`) 1 модуль
+							div(class=`${vnt}-footer`)
+								p(class=`${vnt}-footer-cost ${vnt}-footer-cost-full`) Стоимость:
+									span 10 990р.
+								p(class=`${vnt}-footer-cost ${vnt}-footer-cost-sale`) Скидка:
+									span#sale-1 <?=$sale1;?>
+								p(class=`${vnt}-footer-cost ${vnt}-footer-cost-today`) Стоимость сегодня:
+									span#today-1 <?=$today1;?>
+								+b('', 'variant-footer-button', '<?=$link1;?>', 'Выбрать', '_blank', 'link-1')
+					.col-md-6
+						div(class=`${vnt}`)
+							div(class=`${vnt}-head`)
+								h4(class=`${vnt}-head-title`) 6 модулей
+							div(class=`${vnt}-footer`)
+								p(class=`${vnt}-footer-cost ${vnt}-footer-cost-full`) Стоимость:
+									span 65 940р.
+								p(class=`${vnt}-footer-cost ${vnt}-footer-cost-sale`) Скидка:
+									span#sale-2 <?=$sale2;?>
+								p(class=`${vnt}-footer-cost ${vnt}-footer-cost-today`) Стоимость сегодня:
+									span#today-2 <?=$today2;?>
+								+b('', 'variant-footer-button', '<?=$link2;?>', 'Выбрать', '_blank', 'link-2')
+			.prepayment
+				h4.prepayment-title Акция!!!
+				p.prepayment-text Платите 1 000р., бонусом получаете 
+					span#prepayment-bonus 1 000р. 
+					br
+					| На счет зачисляется 
+					span#prepayment-credited 2 000р.
+				+b('', 'prepayment-button', '<?=$prepLink;?>', 'Оплатить 1 000р.', '_blank', 'prepLink')
+			|
+			|
+			<?php if($now < $dates[2]):?>
+			.timer
+				h4.timer-title Скидка уменьшится через:
+				.clock
+			|
+			|
+			<?php endif;?>

@@ -7,12 +7,13 @@
 -var fav_png = path+'favicon.png';
 -var scripts = path+'js/course.js';
 -var noref = true
--var href = '#plan';
+-var href = '#prices';
 -var ak = true;
 -var ah = true;
 -var footer_title = true
 -var oferta = 'https://mastervision.su/oferta.docx'
 -var autCourse = true;
+-var courseJs = true;
 
 mixin b(cl,clb,href,p,target,id)
 	.button-wrapper(class=cl)
@@ -21,6 +22,8 @@ mixin gt(cl,h3)
 	h3.general-title(class=cl)=h3
 mixin imgs(cl,src,alt)
 	img(class=cl src=path+src alt=alt)
+
+<?php require_once('vars.php');?>
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -35,6 +38,7 @@ html(lang="ru")
 			include pug/course/3-reach
 			include pug/course/4-learn
 			include pug/course/5-plan
+			include pug/course/6-prices
 			include pug/main/5-author
 			include pug/main/6-revs
 			include pug/course/7-last

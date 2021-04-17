@@ -1,3 +1,4 @@
+<?php require_once('vars.php');?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -40,8 +41,8 @@
                 <h1 class="main-title">Современные психотехнологии: <span>аутотренинг, НЛП, гипноз</span></h1>
                 <h2 class="main-subtitle">Управляйте своей жизнью – отражайте манипуляции, стройте отношения, повышайте доход с помощью профессии «Психотехнолог»</h2>
                 <p class="main-info">Автор: <span>Виктор Толстиков</span></p>
-                <p class="main-info">Старт курса: <span class="date">NN.04.2021</span></p>
-                <div class="button-wrapper"><a class="button" href="#plan">Записаться</a></div>
+                <p class="main-info">Старт курса: <span class="date">26.04.2021</span></p>
+                <div class="button-wrapper"><a class="button" href="#prices">Записаться</a></div>
               </div>
               <div class="col-md-6">
                 <div class="main-img"><img src="../img/images/main-course.png" alt="Виктор Толстиков"/>
@@ -75,7 +76,7 @@
               </div>
             </div>
             <p class="general-text general-text-wants">То этот курс для вас</p>
-            <div class="button-wrapper"><a class="button" href="#plan">Записаться</a></div>
+            <div class="button-wrapper"><a class="button" href="#prices">Записаться</a></div>
           </div>
         </div>
       </section>
@@ -181,7 +182,60 @@
                     <li>Узнаете продвинутые психотехнологии исполнения желаний</li>
                   </ul>
                 </div>
-          <div class="button-wrapper"><a class="button" href="#plan">Стать учеником</a></div>
+          <div class="button-wrapper"><a class="button" href="#prices">Стать учеником</a></div>
+        </div>
+      </section>
+      <!-- -var link_1 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5656&clean=true&lg=ru';-->
+      <!-- -var link_2 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5660&clean=true&lg=ru';-->
+      <!-- -var prepLink = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5664&clean=true&lg=ru';-->
+      <section id="prices">
+        <div class="container">
+          <div class="circle circle-blue circle-prices-1"></div>
+          <div class="circle circle-bordered circle-prices-2"></div>
+          <div class="content">
+            <h3 class="general-title general-title-center">Выберите свой вариант:</h3>
+            <div class="variants">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="variant">
+                    <div class="variant-head">
+                      <h4 class="variant-head-title">1 модуль</h4>
+                    </div>
+                    <div class="variant-footer">
+                      <p class="variant-footer-cost variant-footer-cost-full">Стоимость:<span>10 990р.</span></p>
+                      <p class="variant-footer-cost variant-footer-cost-sale">Скидка:<span id="sale-1"><?=$sale1;?></span></p>
+                      <p class="variant-footer-cost variant-footer-cost-today">Стоимость сегодня:<span id="today-1"><?=$today1;?></span></p>
+                      <div class="button-wrapper"><a class="button variant-footer-button" href="<?=$link1;?>" target="_blank" id="link-1">Выбрать</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="variant">
+                    <div class="variant-head">
+                      <h4 class="variant-head-title">6 модулей</h4>
+                    </div>
+                    <div class="variant-footer">
+                      <p class="variant-footer-cost variant-footer-cost-full">Стоимость:<span>65 940р.</span></p>
+                      <p class="variant-footer-cost variant-footer-cost-sale">Скидка:<span id="sale-2"><?=$sale2;?></span></p>
+                      <p class="variant-footer-cost variant-footer-cost-today">Стоимость сегодня:<span id="today-2"><?=$today2;?></span></p>
+                      <div class="button-wrapper"><a class="button variant-footer-button" href="<?=$link2;?>" target="_blank" id="link-2">Выбрать</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="prepayment">
+              <h4 class="prepayment-title">Акция!!!</h4>
+              <p class="prepayment-text">Платите 1 000р., бонусом получаете <span id="prepayment-bonus">1 000р. </span><br/>На счет зачисляется <span id="prepayment-credited">2 000р.</span></p>
+              <div class="button-wrapper"><a class="button prepayment-button" href="<?=$prepLink;?>" target="_blank" id="prepLink">Оплатить 1 000р.</a></div>
+            </div>
+            <?php if($now < $dates[2]):?>
+            <div class="timer">
+              <h4 class="timer-title">Скидка уменьшится через:</h4>
+              <div class="clock"></div>
+            </div>
+            <?php endif;?>
+          </div>
         </div>
       </section>
       <section id="author">
@@ -200,7 +254,7 @@
                 <li>Инструктор славянской системы личностного и духовного развития</li>
                 <li>Постоянный эксперт на ведущих российских телеканалах</li>
               </ul>
-              <div class="button-wrapper"><a class="button button-up button-author" href="#plan">Принять участие</a></div>
+              <div class="button-wrapper"><a class="button button-up button-author" href="#prices">Принять участие</a></div>
             </div>
           </div>
           <div class="author-about">
@@ -265,7 +319,7 @@
               <p class="last-text">Если вы хотите таких или еще более значимых результатов, запишитесь прямо сейчас</p>
             </div>
             <div class="col-md-4">
-              <div class="button-wrapper button-wrapper-last"><a class="button button-up" href="#plan">Записаться</a></div>
+              <div class="button-wrapper button-wrapper-last"><a class="button button-up" href="#prices">Записаться</a></div>
             </div>
           </div>
         </div>
@@ -280,7 +334,7 @@
         <p>ИП Кудряшов Александр Анатольевич, Тюмень, проезд Летний, 9а, ИНН 720410077658, ОГРН 315723200065100</p><a class="conditions" href="https://mastervision.su/oferta.docx" download="download">Условия возврата денежных средств</a>
       </div>
     </footer>
-    <script src="../js/libs.min.js"></script>
+    <script src="../js/course-libs.min.js"></script>
     <script src="../js/course.js"></script>
   </body>
 </html>
